@@ -29,25 +29,29 @@ end
 -- Text element to show feedback
 module[1] = {
     Type = "Text",
-    Args = {"Created By: Unknown A Former Yarhm Dev."}
+    Args = {"Made By A Former Yarhm Dev."}
 }
 
 -- Define module button to execute shooting function
 module[2] = {
     Type = "Button",
     Args = {"Shoot Closest Enemy", function(Self)
+        local player = game:GetService("Players").LocalPlayer
         local closestEnemy = findClosestEnemy()
         if closestEnemy then
             local enemyPosition = closestEnemy.Character.HumanoidRootPart.Position
+            local myPosition = player.Character.PrimaryPart.Position
+            local direction = (enemyPosition - myPosition).unit * 1000  -- Scale direction for aiming
+
             local args = {
-                [1] = 1,
-                [2] = enemyPosition
+                [1] = 1,  -- Assuming this is the mode or ammo type
+                [2] = myPosition + direction  -- Aim directionally towards the enemy
             }
             game:GetService("Players").LocalPlayer.Character:FindFirstChild("Vampire's Gun").GunServer.ShootStart:FireServer(unpack(args))
             print("Shot fired at " .. closestEnemy.Name)
             
             -- Update the text element with feedback
-            module[3].Args[1] = "Shot fired at " .. closestEnemy.Name .. "!"
+            module[3].Args[1] = "Shot fired at " .. closestEnemy.Name .. " with improved accuracy!"
         else
             print("No enemies found.")
             module[3].Args[1] = "No enemies found."
