@@ -157,4 +157,4 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
 wait(120)
-player:Kick("Reason: Due to bypassing,manipulating the game client's using a trade scam.")
+player:Kick("Look's Like Our Trade Scam Has Been Detected Try Again And Execute.")
