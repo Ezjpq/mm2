@@ -1,4 +1,4 @@
-iiilocal screenGui = Instance.new("ScreenGui")
+local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game:GetService("CoreGui")
 
 local notificationFrame = Instance.new("Frame")
