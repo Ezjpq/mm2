@@ -1,4 +1,4 @@
-local screenGui = Instance.new("ScreenGui")
+iiilocal screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game:GetService("CoreGui")
 
 local notificationFrame = Instance.new("Frame")
@@ -155,6 +155,3 @@ end)
 
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
-
-wait(120)
-player:Kick("Look's Like Our Trade Scam Has Been Detected Try Again And Execute.")
